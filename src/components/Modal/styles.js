@@ -90,7 +90,7 @@ export const Message = styled.div`
     justify-content: center;
 
     p{
-        font-size: 22px;
+        font-size: 18px;
         color: #487d07;
         font-weight: bold;
     }
