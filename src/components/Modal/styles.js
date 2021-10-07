@@ -10,14 +10,20 @@ export const Container = styled.div`
 `
 
 export const Wrap = styled.div`
-    max-width: 550px;
-    width: 93%;
-    min-height: 86vh;
+    max-width: 500px;
+    width: 93%; 
+    height: 86vh;
+    max-height: 900px;
     display: flex;
     flex-direction: column;
     background: white;
     border-radius: 15px;
     box-shadow: 1px 5px 25px 5px rgba(0,0,0,0.3);
+
+    @media (max-width: 768px){
+        min-height: 86vh;
+        height: auto;
+    }
 `
 
 export const Header = styled.div`
@@ -35,8 +41,9 @@ export const BoxList = styled.div`
 
 export const BoxResult = styled.div`
     width: 100%;
-    padding: 25px 20px;
+    padding: 20px;
     display: flex;
+    flex-direction: column;
     border-top: solid rgba(0,0,0,0.1);;
     border-bottom: solid rgba(0,0,0,0.1);;
 
@@ -67,5 +74,24 @@ export const BoxBuy = styled.div`
         background: #3b74f2;
         color: white;
         font-size: 25px;
+        cursor: pointer;
     }
 `
+
+export const Message = styled.div`
+    width: 93%;
+    height: 60px;
+    border-radius: 25px;
+    background: #c1f1a6;
+    margin: 0 auto;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p{
+        font-size: 22px;
+        color: #487d07;
+        font-weight: bold;
+    }
+`;

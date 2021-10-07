@@ -2,6 +2,14 @@ import React from 'react'
 import * as S from './styles'
 
 const Modal = ({ children, total }) => {
+
+    const renderMessageFrete = () => (
+        <S.Message>
+            <p>Parabéns, sua compra tem frete grátis !</p>
+        </S.Message>
+    )
+
+    console.log(parseInt(total))
     return (
         <S.Container>
             <S.Wrap>
@@ -16,6 +24,8 @@ const Modal = ({ children, total }) => {
                         <p>Total</p>
                         <p>{total}</p>
                     </S.Total>
+                    {total &&
+                        total.replace(/([^\d])+/gim, '') > 1000 ? renderMessageFrete() : null}
                 </S.BoxResult>
                 <S.BoxBuy>
                     <button>Finalizar Compra</button>
@@ -25,4 +35,4 @@ const Modal = ({ children, total }) => {
     )
 }
 
-export default Modal    
+export default Modal

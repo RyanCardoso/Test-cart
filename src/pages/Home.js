@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <Modal
       total={items.reduce((a, b) => a + b.price, 0)
-        .toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}
+        .toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
     >
       {items.map(item => {
         return (

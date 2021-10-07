@@ -3,13 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
     width: 100%;
     display: flex;
-    //border: solid;
     margin-bottom: 27px;
 `
 
 export const BoxImg = styled.figure`
-    width: 170px;
-    height: 170px;
+    width: 125px;
+    height: 125px;
     display: flex;
     align-items: center;
     justify-content: center;
