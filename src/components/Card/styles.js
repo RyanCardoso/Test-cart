@@ -4,7 +4,7 @@ export const Container = styled.div`
     width: 100%;
     display: flex;
     //border: solid;
-    margin-bottom: 12px;
+    margin-bottom: 27px;
 `
 
 export const BoxImg = styled.figure`

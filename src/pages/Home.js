@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
 import itemAPI from '../server/itemAPI'
 
 //Components
 import Card from '../components/Card'
+import Modal from '../components/Modal'
 
 const Home = () => {
   const [items, setItems] = useState([])
@@ -18,15 +18,20 @@ const Home = () => {
   }
 
   return (
-    <div>
-      {items.map(item => (
-        <Card 
-          title={item.name}
-          img={item.imageUrl}
-          price={item.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
-        />
-      ))}
-    </div>
+    <Modal
+      total={items.reduce((a, b) => a + b.price, 0)
+        .toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}
+    >
+      {items.map(item => {
+        return (
+          <Card
+            title={item.name}
+            img={item.imageUrl}
+            price={item.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+          />
+        )
+      })}
+    </Modal>
   )
 }
 
